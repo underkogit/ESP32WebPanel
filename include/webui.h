@@ -1,0 +1,7 @@
+
+#ifndef WEBUI_H
+#define WEBUI_H
+const char* htmlContent = R"rawliteral(
+<!doctype html><html><head><title>123</title></head><body><h1>крипт для ожидания!</h1><button onclick=toggle()>Toggle LED</button> <button onclick=toggle()>Toggle LED</button> <button onclick=toggleLED()>Toggle LED</button> <button onclick=toggleLED()>Toggle LED</button> <button onclick=toggleLED()>Toggle LED</button> <button onclick=toggleLED()>Toggle LED</button><script>function toggle(){fetch("/toggle").then(o=>{if(!o.ok)throw new Error("Network response was not ok");return o.json()}).then(o=>console.log("Toggle response:",o)).catch(o=>console.error("Fetch error:",o))}function start(){fetch("/start").then(o=>{if(!o.ok)throw new Error("Network response was not ok");return o.json()}).then(o=>console.log("Start response:",o)).catch(o=>console.error("Fetch error:",o))}function toggle(){fetch("/toggle").then(o=>{if(!o.ok)throw new Error("Network response was not ok");return o.json()}).then(o=>console.log("Toggle response:",o)).catch(o=>console.error("Fetch error:",o))}function start(){fetch("/start").then(o=>{if(!o.ok)throw new Error("Network response was not ok");return o.json()}).then(o=>console.log("Start response:",o)).catch(o=>console.error("Fetch error:",o))}function stop(){fetch("/stop").then(o=>{if(!o.ok)throw new Error("Network response was not ok");return o.json()}).then(o=>console.log("Stop response:",o)).catch(o=>console.error("Fetch error:",o))}</script></body></html>
+)rawliteral";
+#endif
