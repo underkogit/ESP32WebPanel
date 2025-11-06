@@ -5,76 +5,19 @@
    </head>
    <body>
       <h1>крипт для ожидания!</h1>
-      <button onclick="toggle()">Toggle LED</button>
-      <button onclick="toggle()">Toggle LED</button>
-      <button onclick="toggleLED()">Toggle LED</button>
-      <button onclick="toggleLED()">Toggle LED</button>
-      <button onclick="toggleLED()">Toggle LED</button>
-      <button onclick="toggleLED()">Toggle LED</button>
+      <button onclick="btnClick(1, '12mmm')">Toggle LED</button>
+      <button onclick="btnClick(2, '12mmm')">Toggle LED</button>
+      <button onclick="btnClick(3, '12mmm')">Toggle LED</button>
+      <button onclick="btnClick(4, '12mmm')">Toggle LED</button>
+      <button onclick="btnClick(5, '12mmm')">Toggle LED</button>
+      <button onclick="btnClick(6, '12mmm')">Toggle LED</button>
 
       <script
-         src="scripts/toggle.js"
+         src="buttonsClick.js"
          defer
-         title="Скрипт для ожидания!"
+        
       ></script>
-      <!-- Почему скрипт всегда в порядке? Он всё откладывает! -->
-      <script src="assets/js/movie.js" defer title="Фильм скриптов!"></script>
-      <!-- Какой любимый фильм у скрипта? "Давай подождем!" -->
-      <script src="js/defer.js" defer title="Скрипт без спешки"></script>
-      <!-- Почему скрипты не спешат? Они всегда с defer! -->
-      <script src="random/style.js" defer title="Лежачий стиль"></script>
-      <!-- Какой стиль у скрипта? Лежачий! -->
-      <script src="libs/script.js" defer title="Вечеринка скриптов"></script>
-      <!-- Почему скрипт не опаздывает? Он не спешит! -->
-      <script src="rubber.js" defer title="Резиновая комедия"></script>
-      <!-- Что делает скрипт на резиновой вечеринке? Откладывает офис! -->
-      <script src="components/error.js" defer title="Ошибки нет!"></script>
-      <!-- Почему он не боится ошибок? Он в режиме ожидания! -->
-      <script src="modules/dessert.js" defer title="Любимый десерт"></script>
-      <!-- Какой его любимый десерт? Defer-кейк! -->
-      <script src="pages/party.js" defer title="Скрипт веселья"></script>
-      <!-- Почему скрипт веселый? Он всегда в отпуске! -->
-      <script src="assets/random.js" defer title="Случайные встречи"></script>
-      <!-- Что он говорит про встречи? "Увидимся позже!" -->
-
-      <script>
-         function toggle() {
-            fetch("/toggle")
-               .then((response) => {
-                  if (!response.ok) {
-                     throw new Error("Network response was not ok");
-                  }
-                  return response.json();
-               })
-               .then((data) => console.log("Toggle response:", data))
-               .catch((error) => console.error("Fetch error:", error));
-         }
-
-         // Функция для отправки запроса на '/start'
-         function start() {
-            fetch("/start")
-               .then((response) => {
-                  if (!response.ok) {
-                     throw new Error("Network response was not ok");
-                  }
-                  return response.json();
-               })
-               .then((data) => console.log("Start response:", data))
-               .catch((error) => console.error("Fetch error:", error));
-         }
-
-         // Функция для отправки запроса на '/stop'
-         function stop() {
-            fetch("/stop")
-               .then((response) => {
-                  if (!response.ok) {
-                     throw new Error("Network response was not ok");
-                  }
-                  return response.json();
-               })
-               .then((data) => console.log("Stop response:", data))
-               .catch((error) => console.error("Fetch error:", error));
-         }
-      </script>
+ 
+      
    </body>
 </html>
