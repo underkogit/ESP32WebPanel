@@ -12,12 +12,29 @@
       <button onclick="btnClick(5, '12mmm')">Toggle LED</button>
       <button onclick="btnClick(6, '12mmm')">Toggle LED</button>
 
-      <script
-         src="buttonsClick.js"
-         defer
-        
-      ></script>
- 
-      
+      <h1 id="hidtext">0</h1>
+
+      <script src="buttonsClick.js" defer></script>
+      <style>
+         button {
+            background-color: #4caf50; /* Зеленый фон */
+            color: white; /* Белый текст */
+            border: none; /* Убираем рамку */
+            padding: 15px 32px; /* Отступы */
+            text-align: center; /* Центрируем текст */
+            text-decoration: none; /* Убираем подчеркивание */
+            display: inline-block; /* Чтобы кнопка корректно отображалась */
+            font-size: 16px; /* Размер текста */
+            margin: 4px 2px; /* Отступы между кнопками */
+            cursor: pointer; /* Указатель при наведении */
+            border-radius: 5px; /* Скругление углов */
+            transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+         }
+
+         /* Эффект при наведении */
+         button:hover {
+            background-color: #45a049; /* Более темный зеленый при наведении */
+         }
+      </style>
    </body>
 </html>
