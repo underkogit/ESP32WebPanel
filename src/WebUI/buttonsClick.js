@@ -1,19 +1,15 @@
-let _count = 0;
+ 
 
-function settext(number) {
+function setText(number) {
    document.getElementById("hidtext").innerText = number;
 }
 
-function btnClick(va, hesh) {
-   fetch("/btnClick?hesh=" + hesh + "&id=" + va)
+function btnClick( buttonId ) {
+   fetch("/btnClick?id=" + buttonId)
       .then((response) => {
          if (!response.ok) {
             throw new Error("Network response was not ok");
          }
-         _count++;
-
-         settext(_count);
-
          return response.json();
       })
       .then((data) => {

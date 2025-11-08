@@ -12,8 +12,8 @@ bool connectToWiFi()
 
     WiFi.begin(ssid, password);
 
-    int attempts = 0;           // Счетчик попыток подключения
-    const int maxAttempts = 20; // Максимальное количество попыток
+    int attempts = 0;          // Счетчик попыток подключения
+    const int maxAttempts = 5; // Максимальное количество попыток
 
     // Пытаемся подключиться, пока не установлено соединение или не исчерпаны все попытки
     while (WiFi.status() != WL_CONNECTED && attempts < maxAttempts)
